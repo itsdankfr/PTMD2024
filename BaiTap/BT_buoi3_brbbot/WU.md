@@ -63,4 +63,4 @@ Sau khi đã nhận được chỉ thị, nó sẽ close kết nối Internet l�
 6. Em chưa hiểu câu hỏi lắm ạ, em cũng chưa tìm được chỗ nào trong pseudo-code của mã độc có chứa từ config ạ, em mới thấy mỗi trong strings có. Hay nó là 1 thuật ngữ gì đó liên quan đến sửa đổi ạ? 
 Câu này em mong được anh giải đáp ạ!
 
-7. Theo tất cả những gì mà em đã phân tích trên, em "mạnh dạn" đoán đây là 1 con `trojan botnet` ạ =)))
+7. Theo tất cả những gì mà em đã phân tích trên, kết hợp với đề bài có tên brbbot em "mạnh dạn" đoán đây là 1 con `trojan botnet` ạ =)))
