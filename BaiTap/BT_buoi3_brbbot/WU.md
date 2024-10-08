@@ -37,18 +37,18 @@
 
 3. Trong strings của file mã độc, em tìm thấy những thông tin em nghĩ là có ích sau:
 
-    a. Chuỗi Agent Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0) cùng với phiên bản HTTP/1.1 cho thấy mã độc có khả năng sử dụng user-agent giống trình duyệt để che giấu các kết nối mạng. Hoặc là em nghĩ nó có thể là user-agent của chính người tạo ra mã độc này ạ?
+    a. Chuỗi `Agent Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)` cùng với phiên bản `HTTP/1.1` cho thấy mã độc có khả năng sử dụng user-agent giống trình duyệt để che giấu các kết nối mạng. Hoặc là em nghĩ nó có thể là user-agent của chính người tạo ra mã độc này ạ?
 
-    b. Các chuỗi mã hóa: Các hàm CryptEncrypt, CryptDestroyKey, và CryptCreateHash là các API mã hóa của Windows. Em nghĩ nó có thể gợi ý mã độc đã sử dụng kỹ thuật mã hóa để bảo vệ dữ liệu của nó hoặc để thực hiện các cuộc tấn công ransomware tống tiền ạ hoặc có thể là nó lợi dụng API mã hoá của Win để giải mã hay mã hoá gì đó cho tránh bị phát hiện. ( Em có được tiếp xúc với cái này trong CTF attack defence, cụ thể là người tấn công sẽ mã hoá các flag dưới dạng base64 chẳng hạn thì người phòng thủ nếu chỉ filter để tìm chuỗi "flag" thì sẽ không thể filter được flag dạng base64 vừa bị tấn công vào và bỏ sót nó )
-
-    c. Chuỗi liên quan đến thao tác file và Internet: Các hàm như InternetReadFile, InternetConnectA, CreateFileA, DeleteFileA, CopyFileA, và WriteFile cho thấy mã độc có khả năng tương tác với các tệp tin hệ thống và thực hiện các kết nối qua Internet, nó là dấu hiệu cho thấy mã độc có thể thực hiện các hành vi như tải xuống tệp, xóa dấu vết hoặc giao tiếp với máy chủ điều khiển từ xa.
-
-
-
-4. Theo em trong cụ thể bài này - trường hợp này, dấu hiệu file mã độc này đã xuất hiện trên máy nạn nhân chính là sự có mặt của chương trình có tên Mozilla với Agent db 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)
+    b. Các chuỗi mã hóa: Các hàm `CryptEncrypt, CryptDestroyKey, và CryptCreateHash` là các API mã hóa của Windows. Em nghĩ nó có thể gợi ý mã độc đã sử dụng kỹ thuật mã hóa để bảo vệ dữ liệu của nó hoặc để thực hiện các cuộc tấn công ransomware tống tiền ạ hoặc có thể là nó lợi dụng API mã hoá của Win để giải mã hay mã hoá gì đó cho tránh bị phát hiện. `( Em có được tiếp xúc với cái này trong CTF attack defence, cụ thể là người tấn công sẽ mã hoá các flag dưới dạng base64 chẳng hạn thì người phòng thủ nếu chỉ filter để tìm chuỗi "flag" thì sẽ không thể filter được flag dạng base64 vừa bị tấn công vào và bỏ sót nó, vì vậy em cũng nghi ngờ nó là 1 cách làm tương tự )`
+   
+    c. Chuỗi liên quan đến thao tác file và Internet: Các hàm như `InternetReadFile, InternetConnectA, CreateFileA, DeleteFileA, CopyFileA, và WriteFile` cho thấy mã độc có khả năng tương tác với các tệp tin hệ thống và thực hiện các kết nối qua Internet, nó là dấu hiệu cho thấy mã độc có thể thực hiện các hành vi như tải xuống tệp, xóa dấu vết hoặc giao tiếp với máy chủ điều khiển từ xa.
 
 
-5. Về network, theo em thấy chỉ có 1 vài điểm liên quan nằm ở trong hàm WinMain, mã độc có call `WinAPI CreateEventW` rồi sau đó call 1 loạt các hàm như sub_14001840 để đọc file copy file hay nhận chỉ thị từ Internet ạ em không chắc phần này lắm 
+
+5. Theo em trong cụ thể bài này - trường hợp này, dấu hiệu file mã độc này đã xuất hiện trên máy nạn nhân chính là sự có mặt của chương trình có tên Mozilla với Agent db 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)
+
+
+6. Về network, theo em thấy chỉ có 1 vài điểm liên quan nằm ở trong hàm WinMain, mã độc có call `WinAPI CreateEventW` rồi sau đó call 1 loạt các hàm như sub_14001840 để đọc file copy file hay nhận chỉ thị từ Internet ạ em không chắc phần này lắm 
 
 
 ![image](https://github.com/user-attachments/assets/1e0992ba-6df1-41b0-9b5e-222e2bcc0263)
