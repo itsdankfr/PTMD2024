@@ -30,7 +30,7 @@
    ![image](https://github.com/user-attachments/assets/4ca7b3a7-fbda-4fe2-903f-5d0fd91b3f9b)
 
 
-    b. Tuy nhiên, em cũng thấy mã độc sử dụng các hàm như GetStartupInfoW, WSAStartup, WSACleanup. Em nghĩ chúng có thể đóng vai trò quan trọng trong quá trình khởi động và duy trì hoạt động của mã độc. Đây có thể là cách mã độc ngụy trang dưới các ứng dụng phổ biến để tránh bị phát hiện. Ngoài ra em cũng để ý có 1 user-agent của Mozilla, em không biết liệu đây có phải kiểu ẩn mình dưới dạng tên của 1 trình duyệt chạy trong hệ thống không nên em chỉ để nó ở dạng tình nghi ạ.
+    b. Tuy nhiên, em cũng thấy mã độc sử dụng các WinAPI như GetStartupInfoW, WSAStartup, WSACleanup. Em nghĩ chúng có thể đóng vai trò quan trọng trong quá trình khởi động và duy trì hoạt động của mã độc. Đây có thể là cách mã độc ngụy trang dưới các ứng dụng phổ biến để tránh bị phát hiện. Ngoài ra em cũng để ý có 1 user-agent của Mozilla, em không biết liệu đây có phải kiểu ẩn mình dưới dạng tên của 1 trình duyệt chạy trong hệ thống không nên em chỉ để nó ở dạng tình nghi ạ.
 
     ![image](https://github.com/user-attachments/assets/6f0d7253-0d9f-45fb-a928-f0c8f668bab3)
 
