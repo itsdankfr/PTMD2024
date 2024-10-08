@@ -48,7 +48,7 @@
 
 
 
-4. Theo em trong cụ thể bài này - trường hợp này, dấu hiệu file mã độc này đã xuất hiện trên máy nạn nhân chính là việc tệp tin được sao chép trong thư mục APPDATA và sự xuất hiện của khóa "brbbot" trong registry tại vị trí HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run. Hoặc có thể chuỗi Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1) sẽ xuất hiện dưới dạng một tiến trình (process), tạo sự ngụy trang giống như một phiên bản của trình duyệt hợp pháp như em đã đề cập bên trên ạ?
+4. Theo em trong cụ thể bài này - trường hợp này, dấu hiệu file mã độc này đã xuất hiện trên máy nạn nhân chính là việc tệp tin được sao chép trong `thư mục APPDATA` và sự xuất hiện của `khóa "brbbot"` trong registry tại vị trí `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run`. Hoặc có thể chuỗi `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)` sẽ xuất hiện dưới dạng một tiến trình (process), tạo sự ngụy trang giống như một phiên bản của trình duyệt hợp pháp như em đã đề cập bên trên ạ?
 
 
 5. Về network, theo em thấy chỉ có 1 vài điểm liên quan nằm ở trong hàm WinMain, mã độc có call `WinAPI CreateEventW` rồi sau đó call 1 loạt các hàm như sub_14001840 để đọc file copy file hay nhận chỉ thị từ Internet ạ em không chắc phần này lắm 
