@@ -15,6 +15,9 @@
 ## Bài làm
 1. Mã độc bị virustotal gán nhãn độc hại (63/73 security vendors flagged this file as malicious), nó có thể là 1 con `trojan hoặc ransomware`
 
+![image](https://github.com/user-attachments/assets/773bec3f-8ca6-49e2-96b7-136679ca125e)
+
+
 2. Theo em tìm hiểu, kỹ thuật persistence là các kỹ thuật giúp mã độc tạo được sự tồn tại và duy trì hoạt động trong hệ thống, và mã độc này đã đạt được mục đích khi sử dụng kỹ thuật này ( đạt được persistence ), cụ thể theo em phân tích em nhận ra 2 ý nổi bật dưới đây:
 
     a. Mã độc đã thực hiện kỹ thuật persistence bằng cách chỉnh sửa registry, cụ thể là thêm mục "brbbot" vào vị trí HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run. Nhờ đó, mã độc sẽ tự động chạy mỗi khi hệ thống khởi động, giúp duy trì hoạt động mà không cần sự can thiệp từ người dùng.
