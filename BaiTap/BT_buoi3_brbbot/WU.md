@@ -84,6 +84,114 @@ Update : Ngoài ra, theo em thấy trong phần này dữ liệu đã được m
             while ( v26 );```
 
 
-6. 
+6. Em chưa tìm được những nội dung liên quan đến việc giải mã config lắm (em chưa tìm ra mã độc sẽ giải mã dữ liệu gì và lúc nào, em chỉ thấy nó dùng `strstr` để tìm các substring dưới đây). Hiện em tìm được 2 phần liên quan đến việc mã hoá dữ liệu của botnet sau đó sẽ trả về cho C&C.
+
+```
+if ( v1 >= 0 )
+  {
+    v5 = findString(Src, (unsigned int)Size, "uri", &v31);
+    v6 = v31;
+    v4 = v5;
+    if ( v5 >= 0 )
+    {
+      v7 = findString(v2, (unsigned int)v3, "exec", &v32);
+      v8 = v32;
+      v4 = v7;
+      if ( v7 >= 0 )
+      {
+        v9 = findString(v2, (unsigned int)v3, "file", &v37);
+        v10 = v37;
+        v4 = v9;
+        if ( v9 >= 0 )
+        {
+          v11 = findString(v2, (unsigned int)v3, "conf", &v28);
+          v12 = v28;
+          v4 = v11;
+          if ( v11 >= 0 )
+          {
+            v13 = findString(v2, (unsigned int)v3, "exit", &Source);
+            v14 = Source;
+            v4 = v13;
+            if ( v13 >= 0 )
+            {
+              v15 = findString(v2, (unsigned int)v3, "sleep", (char **)&lpMem);
+              v16 = (const char *)lpMem;
+              v4 = v15;
+              if ( v15 >= 0 )
+              {
+                v4 = findString(v2, (unsigned int)v3, "encode", &Buffer);
+                if ( v4 >= 0 )
+                {
+                  if ( strlen(Buffer) > 2
+                    || strlen(v14) > 0x104
+                    || (v17 = v28, strlen(v28) > 0x104)
+                    || strlen(v37) > 0x104
+                    || strlen(v8) > 0x104
+                    || strlen(v6) > 0x104 )
+                  {
+                    v4 = -2147024809;
+                  }
+                  else
+                  {
+                    memset((void *)a1, 0, 1308ui64);
+                    sscanf(Buffer, "%2x", a1 + 1300);
+                    *(_DWORD *)(a1 + 1304) = atoi((const char *)lpMem);
+                    strncpy((char *)(a1 + 520), v14, strlen(v14));
+                    strncpy((char *)(a1 + 780), v17, strlen(v17));
+                    strncpy((char *)(a1 + 1040), v37, strlen(v37));
+                    strncpy((char *)(a1 + 260), v8, strlen(v8));
+                    strncpy((char *)a1, v6, strlen(v6));
+                    v4 = 0;
+                  }
+                  v16 = (const char *)lpMem;
+                }
+              }
+              if ( v16 )
+              {
+                v18 = strlen(v16) + 1;
+                v19 = lpMem;
+                memset(lpMem, 0, v18 - 1);
+                ProcessHeap = GetProcessHeap();
+                HeapFree(ProcessHeap, 0, v19);
+              }
+            }
+            if ( v14 )
+            {
+              memset(v14, 0, strlen(v14));
+              v21 = GetProcessHeap();
+              HeapFree(v21, 0, v14);
+            }
+            v12 = v28;
+          }
+          if ( v12 )
+          {
+            memset(v12, 0, strlen(v12));
+            v22 = GetProcessHeap();
+            HeapFree(v22, 0, v12);
+          }
+          v10 = v37;
+        }
+        if ( v10 )
+        {
+          memset(v10, 0, strlen(v10));
+          v23 = GetProcessHeap();
+          HeapFree(v23, 0, v10);
+        }
+      }
+      if ( v8 )
+      {
+        memset(v8, 0, strlen(v8));
+        v24 = GetProcessHeap();
+        HeapFree(v24, 0, v8);
+      }
+    }
+    if ( v6 )
+    {
+      memset(v6, 0, strlen(v6));
+      v25 = GetProcessHeap();
+      HeapFree(v25, 0, v6);
+    }
+  }
+```
 
 7. Theo tất cả những gì mà em đã phân tích trên, kết hợp với đề bài có tên brbbot em "mạnh dạn" đoán đây là 1 con `trojan botnet` ạ =)))
