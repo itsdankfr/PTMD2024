@@ -194,4 +194,4 @@ if ( v1 >= 0 )
   }
 ```
 
-7. Theo tất cả những gì mà em đã phân tích trên, kết hợp với đề bài có tên brbbot em "mạnh dạn" đoán đây là 1 con `trojan botnet` ạ =)))
+7. Theo tất cả những gì mà em đã phân tích trên, kết hợp với đề bài có tên brbbot em "mạnh dạn" đoán đây là 1 con `trojan horse cụ thể là loại botnet malware` ạ =)))
