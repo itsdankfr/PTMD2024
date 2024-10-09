@@ -63,7 +63,27 @@ Sau khi đã nhận được chỉ thị, nó sẽ close kết nối Internet l�
 ![image](https://github.com/user-attachments/assets/4393e141-5795-48ab-9b7a-7036efbfe7cc)
 
 
-6. Em chưa hiểu câu hỏi lắm ạ, em cũng chưa tìm được chỗ nào trong pseudo-code của mã độc có chứa từ config ạ, em mới thấy mỗi trong strings có. Hay nó là 1 thuật ngữ gì đó liên quan đến sửa đổi ạ? 
-Câu này em mong được anh giải đáp ạ!
+Update : Ngoài ra, theo em thấy trong phần này dữ liệu đã được mã độc mã hoá cẩn thận trước khi gửi đi trong hàm `sub_140001C10`, điều này có thể lí giải bởi việc theo em tìm hiểu, các botnet sẽ cần phải trao đổi và nhận chỉ thị từ các `C&C (Command and Control Server` nên để tránh bị phát hiện các dữ liệu được mã hoá rất cẩn thận khi đi qua 3 bước mã hoá, 1 là xor ```do {
+        ++v11;
+        *v13++ ^= *(_BYTE *)(a1 + 1300);
+        LODWORD(v12) = nSize;
+      }
+      while ( v11 < nSize );```  và bước 2 hex ```do
+      {
+        sprintf(v17, "%02x", (unsigned int)*v16);
+        v17 += 2;
+        ++v16;
+        --v12;
+      }
+      while ( v12 );```, bước 3 là xor lần cuối ```qmemcpy(v27, "#3#or%5452o#8A", 14);
+            do
+            {
+              *v27++ ^= 0x41u;
+              --v26;
+            }
+            while ( v26 );```
+
+
+6. 
 
 7. Theo tất cả những gì mà em đã phân tích trên, kết hợp với đề bài có tên brbbot em "mạnh dạn" đoán đây là 1 con `trojan botnet` ạ =)))
