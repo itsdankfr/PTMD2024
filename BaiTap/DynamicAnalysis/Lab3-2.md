@@ -32,7 +32,7 @@ lần 2 gán thì lại dùng ValueName với 1 database khác?
 
 
 
-### 3 :
+### 3. Cách chạy mã độc sau khi cài đặt?
 Cách thực thi như em đã đề cập ở trên, em có 2 cách nhưng về bản chất đều là 1
 Cách đầu tiên là sử dụng cmd => rundll32.exe filename, [entry point] [args] => rundll32.exe Lab3-2.dll, Install ( Hình ảnh mã độc được ghi lại trong `processhacker` sau khi thực thi )
 
