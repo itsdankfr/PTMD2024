@@ -14,6 +14,18 @@ Phân tích động mẫu Lab3-2.dll trong 'sample buoi 3.zip' pass infected. B�
 
 ### 1 : Cách cài dặt mã độc
 Tải file từ Teams, em nhận được 1 file .dll ( dynamic link library ). Vì trước đó đã làm 1 bài trong PTITCTF phải debug loại file này nên em biết phải dùng command `rundll32.exe` với đúng tham số truyền vào để cài đặt được 1 file dll
+
+
 ![image](https://github.com/user-attachments/assets/a6a9fe79-6abf-48e7-90d0-5bc280f37e2e)
+
+
+### 2 :
+
+
+### 3 :
+Cách thực thi như em đã đề cập ở trên, em có 2 cách nhưng về bản chất đều là 1
+1 : sử dụng cmd => rundll32.exe filename, [entry point] [args] => rundll32.exe Lab3-2.dll, Install
+2 : 
+
 
 ![Screenshot 2024-10-12 231844](https://github.com/user-attachments/assets/c6db3f22-f4fd-4a10-8938-6f22cf5c2279)
