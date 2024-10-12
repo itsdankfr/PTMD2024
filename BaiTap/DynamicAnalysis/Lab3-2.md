@@ -1,6 +1,6 @@
 # Bài tập phân tích động mã độc
 ## `Chử Đức Anh - B23DCAT004`
-# Vì cài đặt môi trường ảo gặp nhiều bugs nên hơi mất thời gian ạ, em sẽ cố hoàn thành nhanh hiện em vẫn đang làm tiếp ạ em chi sub bài trước
+# Vì cài đặt môi trường ảo gặp nhiều bugs nên em hơi mất thời gian ngày hôm nay ạ, em sẽ cố hoàn thành nhanh hiện em vẫn đang làm tiếp ạ em chi sub bài trước
 
 ### Instructions
 Phân tích động mẫu Lab3-2.dll trong 'sample buoi 3.zip' pass infected. Bạn hãy trả lời các câu hỏi sau:
