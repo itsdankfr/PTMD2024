@@ -40,4 +40,8 @@ Tại endpoint, em thấy nó trỏ đến 1 Website và theo em tìm hiểu Bot
 
 ![image](https://github.com/user-attachments/assets/8477f5ef-28b2-4528-a06f-f79a68e0d3e0)
 
+![image](https://github.com/user-attachments/assets/3ea3d3b2-faf8-4c30-94f8-942691b97ea1)
+
+![image](https://github.com/user-attachments/assets/c9dadc90-42fa-4d15-adb2-76f3c52b9439)
+
 Tóm lại sau khi phân tích, em xin đưa ra kết luận đây là một con Botnet ạ:>!
